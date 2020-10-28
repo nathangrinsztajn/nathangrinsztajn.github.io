@@ -24,7 +24,7 @@ date_format = "Jan 2006"
   location = "Lille, France"
   date_start = "2019-11-01"
   date_end = ""
-  description = "Exploration in Bandits and Reinforcement Learning"
+  description = "Exploration in Bandits and Reinforcement Learning."
 
 #Responsibilities include:
   
@@ -33,14 +33,14 @@ date_format = "Jan 2006"
 #  * Deploying
 #  """
 
-[[experience]]
-  title = "Teaching Assistant"
-  company = "University of Lille"
-  company_url = ""
-  location = "Lille, France"
-  date_start = "2020-01-01"
-  date_end = ""
-  description = """Teachings: Machine Learning, Natural Language Processing"""
+#[[experience]]
+#  title = "Teaching Assistant"
+#  company = "University of Lille"
+#  company_url = ""
+#  location = "Lille, France"
+#  date_start = "2020-01-01"
+#  date_end = ""
+#  description = """Teachings: Machine Learning, Natural Language Processing"""
 
 [[experience]]
   title = "Data Scientist"
@@ -49,7 +49,7 @@ date_format = "Jan 2006"
   location = "Paris, France"
   date_start = "2019-05-01"
   date_end = "2019-10-31"
-  description = """Research project on the analysis of news feeds to predict movements of different assets in the energy market"""
+  description = """Research project on the analysis of news feeds to predict movements of different assets in the energy market."""
 
 [[experience]]
   title = "Junior Index Structurer"
@@ -58,15 +58,15 @@ date_format = "Jan 2006"
   location = "London, UK"
   date_start = "2018-01-01"
   date_end = "2018-08-31"
-  description = """Pricing of different financial products"""
+  description = """Pricing of different financial products."""
 
 [[experience]]
-  title = "Risk Management inter"
+  title = "Risk Management intern"
   company = "AXA France"
   company_url = ""
   location = "Paris, France"
   date_start = "2017-06-01"
   date_end = "2017-11-30"
-  description = """Implementing a reserving model for long-term care """
+  description = """Implementing a reserving model for long-term care. """
 
 +++
