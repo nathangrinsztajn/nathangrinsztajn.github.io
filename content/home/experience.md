@@ -18,27 +18,55 @@ date_format = "Jan 2006"
 #   Leave `date_end` empty if it's your current employer.
 #   Begin/end multi-line descriptions with 3 quotes `"""`.
 [[experience]]
-  title = "CEO"
-  company = "GenCoin"
+  title = "PhD Student"
+  company = "CNRS/Inria"
   company_url = ""
-  location = "California"
-  date_start = "2017-01-01"
+  location = "Lille, France"
+  date_start = "2019-11-01"
   date_end = ""
-  description = """
-  Responsibilities include:
+  description = "Exploration in Bandits and Reinforcement Learning"
+
+#Responsibilities include:
   
-  * Analysing
-  * Modelling
-  * Deploying
-  """
+#  * Analysing
+#  * Modelling
+#  * Deploying
+#  """
 
 [[experience]]
-  title = "Professor"
-  company = "University X"
+  title = "Teaching Assistant"
+  company = "University of Lille"
   company_url = ""
-  location = "California"
-  date_start = "2016-01-01"
-  date_end = "2016-12-31"
-  description = """Taught electronic engineering and researched semiconductor physics."""
+  location = "Lille, France"
+  date_start = "2020-01-01"
+  date_end = ""
+  description = """Teachings: Machine Learning, Natural Language Processing"""
+
+[[experience]]
+  title = "Data Scientist"
+  company = "Kayrros"
+  company_url = ""
+  location = "Paris, France"
+  date_start = "2019-05-01"
+  date_end = "2019-10-31"
+  description = """Research project on the analysis of news feeds to predict movements of different assets in the energy market"""
+
+[[experience]]
+  title = "Junior Index Structurer"
+  company = "Société générale CIB"
+  company_url = ""
+  location = "London, UK"
+  date_start = "2018-01-01"
+  date_end = "2018-08-31"
+  description = """Pricing of different financial products"""
+
+[[experience]]
+  title = "Risk Management inter"
+  company = "AXA France"
+  company_url = ""
+  location = "Paris, France"
+  date_start = "2017-06-01"
+  date_end = "2017-11-30"
+  description = """Implementing a reserving model for long-term care """
 
 +++
