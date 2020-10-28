@@ -61,12 +61,14 @@ subtitle = ""
   
 [advanced]
  # Custom CSS. 
- css_style = ""
+ # css_style = ""
  
  # CSS class.
- css_class = ""
+ # css_class = ""
 +++
 
 # {{% callout note %}}
-# Quickly discover relevant content by [filtering publications](./publication/).
+# Quickly discover relevant content by 
+# [filtering publications]
+# (./publication/).
 # {{% /callout %}}
