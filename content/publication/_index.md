@@ -13,3 +13,9 @@ header:
   caption: ""
   image: ""
 ---
+
+title: "Sub-Sampling for Efficient Non-Parametric Bandit Exploration"
+date: "2020-10-22"
+publication_types: 1
+publication: "Neurips 2020"
+abstract: ""
