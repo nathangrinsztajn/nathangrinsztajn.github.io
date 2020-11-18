@@ -19,12 +19,12 @@ date_format = "Jan 2006"
 #   Begin/end multi-line descriptions with 3 quotes `"""`.
 [[experience]]
   title = "PhD Student"
-  company = "CNRS/Inria"
+  company = "Inria"
   company_url = ""
   location = "Lille, France"
-  date_start = "2019-11-01"
+  date_start = "2019-10-01"
   date_end = ""
-  description = "Exploration in Bandits and Reinforcement Learning."
+  description = "Reinforcement learning for combinatorial optimization, graph representation. Under the supervision of P. Preux."
 
 #Responsibilities include:
   
@@ -32,6 +32,24 @@ date_format = "Jan 2006"
 #  * Modelling
 #  * Deploying
 #  """
+
+[[experience]]
+  title = "Graduate Research Intern"
+  company = "UC Berkeley"
+  company_url = ""
+  location = "California"
+  date_start = "2018-04-01"
+  date_end = "2018-08-15"
+  description = """Machine learning and statistics to study biological scRNA-seq data. Under the supervision of S. Dudoit."""
+
+[[experience]]
+  title = "Blockchain Developer (intern)"
+  company = "BitSpread Ltd"
+  company_url = ""
+  location = "London, UK"
+  date_start = "2017-06-01"
+  date_end = "2017-11-30"
+  description = """Developed Ethereum smart-contracts to create a decentralized investment fund."""
 
 #[[experience]]
 #  title = "Teaching Assistant"
@@ -41,32 +59,4 @@ date_format = "Jan 2006"
 #  date_start = "2020-01-01"
 #  date_end = ""
 #  description = """Teachings: Machine Learning, Natural Language Processing"""
-
-[[experience]]
-  title = "Data Scientist"
-  company = "Kayrros"
-  company_url = ""
-  location = "Paris, France"
-  date_start = "2019-05-01"
-  date_end = "2019-10-31"
-  description = """Research project on the analysis of news feeds to predict movements of different assets in the energy market."""
-
-[[experience]]
-  title = "Junior Index Structurer"
-  company = "Société générale CIB"
-  company_url = ""
-  location = "London, UK"
-  date_start = "2018-01-01"
-  date_end = "2018-08-31"
-  description = """Pricing of different financial products."""
-
-[[experience]]
-  title = "Risk Management intern"
-  company = "AXA France"
-  company_url = ""
-  location = "Paris, France"
-  date_start = "2017-06-01"
-  date_end = "2017-11-30"
-  description = """Implementing a reserving model for long-term care. """
-
 +++

@@ -1,34 +1,37 @@
 ---
 # Display name
-title: Dorian Baudry
+title:  Nathan Grinsztajn 
 
 # Is this the primary user of the site?
 superuser: true
 
 # Role/position
-role: PhD Student
+role: PhD Candidate 
 
 # Organizations/Affiliations
 organizations:
-- name: CNRS/Inria
+- name: Inria/CNRS/Univ. Lill
   url: ""
 
 # Short bio (displayed in user profile at end of posts)
 bio: My research interests include Bandits, Reinforcement Learning, and Machine Learning in General.
 
 interests:
-- Artificial Intelligence
-- Sequential Learning
 - Reinforcement Learning
+- Graph Representation Learning
+- Combinatorial Optimization
 
 education:
   courses:
   - course: PhD Student
-    institution: CNRS/Inria Lille, SequeL/ScooL team
+    institution: Inria Lille, SequeL/ScooL team
     year: 2019-now
-  - course: MSc in Statistics and Computer Science
-    institution: ENSAE Paris
+  - course: MSc MVA "Mathematics, Vision and Learning"
+    institution: École Normale Supérieure Paris-Saclay
     year: 2019
+  - course: Graduate degree in Statistics and Computer Science
+    institution: Ecole polytechnique
+    year: 2015-2019
   
 # Social/Academic Networking
 # For available icons, see: https://sourcethemes.com/academic/docs/page-builder/#icons
@@ -37,16 +40,16 @@ education:
 social:
 - icon: envelope
   icon_pack: fas
-  link: '/#contact'  # For a direct email link, use "mailto:test@example.org".
-# - icon: twitter
-#  icon_pack: fab
-#  link: https://twitter.com/GeorgeCushen
+  link: 'mailto:nathan.grinsztajn@inria.fr'  # For a direct email link, use "mailto:test@example.org".
+- icon: twitter
+  icon_pack: fab
+  link: https://twitter.com/NGrinsztajn
 # - icon: google-scholar
 #  icon_pack: ai
 #  link: https://scholar.google.co.uk/citations?user=sIwtMXoAAAAJ
 - icon: github
   icon_pack: fab
-  link: https://github.com/dbaudry
+  link: https://github.com/nathangrinsztajn
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
 # - icon: cv
@@ -54,7 +57,7 @@ social:
 #   link: files/cv.pdf
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
-email: ""
+email: "nathan.grinsztajn@inria.fr"
 
 # Highlight the author in author lists? (true/false)
 highlight_name: false
@@ -66,4 +69,4 @@ user_groups:
 - Visitors
 ---
 
-I am a PhD student in Machine Learning at CNRS in the Inria SequeL/ScooL team. My supervisors are Emilie Kaufmann and Odalric-Ambryn Maillard. I study the problem of exploration in the bandits models, but my research interest also include reinforcement learning and machine learning in general. 
+I am a Ph.D. Student in Reinforcement Learning for Combinatorial Optimization at Inria/CNRS in the SequeL/ScooL team, under the supervision of P. Preux. My research interests also include graph representation learning and geometric deep learning.

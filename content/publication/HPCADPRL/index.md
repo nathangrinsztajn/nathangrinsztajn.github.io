@@ -1,9 +1,9 @@
 +++
-title = "Sub-Sampling Dueling Algorithms for Efficient Bandit Exploration"
+title = "Geometric Deep Reinforcement Learning for Dynamic DAG Scheduling"
 date = 2020-10-22T12:12:00+01:00
 
 # Authors. Comma separated list, e.g. `["Bob Smith", "David Jones"]`.
-authors = ["Dorian Baudry", "Emilie Kaufmann", "Odalric-Ambrym Maillard"]
+authors = ["Nathan Grinsztajn", "Olivier Beaumont", "Emmanuel Jeannot", "Philippe Preux"]
 
 # Publication type.
 # Legend:
@@ -19,12 +19,12 @@ authors = ["Dorian Baudry", "Emilie Kaufmann", "Odalric-Ambrym Maillard"]
 publication_types = ["1"]
 
 # Publication name and optional abbreviated version.
-publication = "Advances in [Neural Information Processing Systems](https://neurips.cc/Conferences/2020) 33 (NeurIPS 2020)"
-publication_short = "[NeurIPS 2020](https://neurips.cc/Conferences/2020)"
-publication_extra = "[spotlight -- 4% acceptance rate]"
+publication = "Advances in [IEEE ADPRL](http://www.ieeessci2020.org/symposiums/adprl.html) (ADPRL 2020)"
+publication_short = "[IEEE ADPRL](http://www.ieeessci2020.org/symposiums/adprl.html)"
+# publication_extra = "[spotlight -- 4% acceptance rate]"
 
 # Abstract and optional shortened version.
-abstract = "In this paper we propose the first multi-armed bandit algorithm based on re-sampling that achieves asymptotically optimal regret simultaneously for different families of arms (namely Bernoulli, Gaussian and Poisson distributions). Unlike Thompson Sampling which requires to specify a different prior to be optimal in each case, our proposal RB-SDA does not need any distribution-dependent tuning. RB-SDA belongs to the family of Sub-sampling Duelling Algorithms (SDA) which combines the sub-sampling idea first used by the BESA [1] and SSMC [2] algorithms with different sub-sampling schemes. In particular, RB-SDA uses Random Block sampling. We perform an experimental study assessing the flexibility and robustness of this promising novel approach for exploration in bandit models."
+abstract = """In practice, it is quite common to face combinatorial optimization problems which contain uncertainty along with non-determinism and dynamicity. These three properties call for appropriate algorithms; reinforcement learning (RL) is dealing with them in a very natural way. Today, despite some efforts, most real-life combinatorial optimization problems remain out of the reach of reinforcement learning algorithms. In this paper, we propose a reinforcement learning approach to solve a realistic scheduling problem, and apply it to an algorithm commonly executed in the high performance computing community, the Cholesky factorization. On the contrary to static scheduling, where tasks are assigned to processors in a predetermined ordering before the beginning of the parallel execution, our method is dynamic: task allocations and their execution ordering are decided at runtime, based on the system state and unexpected events, which allows much more flexibility. To do so, our algorithm uses graph neural networks in combination with an actor-critic algorithm (A2C) to build an adaptive representation of the problem on the fly. We show that this approach is competitive with state-of-the-art heuristics used in high-performance computing runtime systems. Moreover, our algorithm does not require an explicit model of the environment, but we demonstrate that extra knowledge can easily be incorporated and improves performance. We also exhibit key properties provided by this RL approach, and study its transfer abilities to other instances."""
 # Is this a selected publication? (true/false)
 featured = true
 
@@ -49,7 +49,7 @@ projects = []
 slides = ""
 
 # Links (optional).
-url_pdf = "https://hal.archives-ouvertes.fr/hal-02977552v1"
+url_pdf = "https://arxiv.org/abs/2011.04333"
 url_preprint = ""
 url_code = ""
 url_dataset = ""
