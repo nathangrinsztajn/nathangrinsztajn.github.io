@@ -69,4 +69,4 @@ user_groups:
 - Visitors
 ---
 
-I am a Ph.D. Student in Reinforcement Learning for Combinatorial Optimization at Inria/CNRS in the SequeL/ScooL team, under the supervision of P. Preux. My research interests also include graph representation learning and geometric deep learning.
+I am a Ph.D. student in reinforcement learning for combinatorial optimization at Inria/CNRS in the SequeL/ScooL team, under the supervision of P. Preux. My research interests also include graph representation learning and geometric deep learning.
