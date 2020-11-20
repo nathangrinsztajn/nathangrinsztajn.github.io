@@ -16,7 +16,8 @@ The goal of this internship is to:&lt;/p>
 &lt;/ul>
 &lt;p>&lt;strong>Bibliography&lt;/strong>:&lt;/p>
 &lt;ul>
-&lt;li>Sutton, Barto, &lt;a href="http://incompleteideas.net/book/the-book.html" target="_blank" rel="noopener">Reinforcement Learning, an Introduction&lt;/a>, 2nd edition, 2018&lt;/li>
+&lt;li>Sutton, Barto, &lt;a href="http://incompleteideas.net/book/the-book.html" target="_blank" rel="noopener">Reinforcement Learning, an Introduction&lt;/a>, 2nd edition, 2018.&lt;/li>
+&lt;li>Battaglia et al. &lt;a href="http://arxiv.org/abs/1806.01261" target="_blank" rel="noopener">Relational Inductive Biases, Deep Learning, and Graph Networks&lt;/a> ArXiv:1806.01261, October 17, 2018.&lt;/li>
 &lt;li>A. Hertz, D. de Werra, &lt;a href="https://link.springer.com/article/10.1007/BF02239976" target="_blank" rel="noopener">Using tabu search techniques for graph coloring&lt;/a>. &lt;em>Computing&lt;/em> &lt;strong>39,&lt;/strong> 345–351 (1987).&lt;/li>
 &lt;/ul>
 &lt;p>&lt;strong>Working environment&lt;/strong>: &lt;a href="https://team.inria.fr/scool/" target="_blank" rel="noopener">Scool&lt;/a> (previously &lt;a href="http://sequel.lille.inria.fr/" target="_blank" rel="noopener">SequeL&lt;/a>) is a well-known research group in reinforcement learning and bandits. It is composed of 5 permanent researchers, 20+ PhD students, a couple of post-docs and engineers. Scool provides a very rich and stimulating for doing cutting-edge research in RL.&lt;/p></description></item><item><title>RL for Dynamic Task Graph Scheduling</title><link>https://nathan-grinsztajn.netlify.app/internships/hpc/</link><pubDate>Fri, 20 Nov 2020 00:00:00 +0100</pubDate><guid>https://nathan-grinsztajn.netlify.app/internships/hpc/</guid><description>&lt;p>&lt;strong>Supervisors&lt;/strong>: &lt;a href="https://philippe-preux.github.io/" target="_blank" rel="noopener">Philippe Preux&lt;/a>, &lt;a href="https://nathangrinsztajn.github.io/" target="_blank" rel="noopener">Nathan Grinsztajn&lt;/a>&lt;/p>
@@ -41,7 +42,8 @@ The goal of this internship is to:&lt;/p>
 &lt;p>&lt;strong>Bibliography&lt;/strong>:&lt;/p>
 &lt;ul>
 &lt;li>Sutton, Barto, &lt;a href="http://incompleteideas.net/book/the-book.html" target="_blank" rel="noopener">Reinforcement Learning, an Introduction&lt;/a>, 2nd edition, 2018&lt;/li>
-&lt;li>Aditya Paliwal et al, &lt;a href="https://arxiv.org/abs/1905.02494" target="_blank" rel="noopener">Reinforced genetic algorithmlearning for optimizing computation graphs&lt;/a>. InProc. ICLR, page 24,2020&lt;/li>
+&lt;li>Aditya Paliwal et al, &lt;a href="https://arxiv.org/abs/1905.02494" target="_blank" rel="noopener">Reinforced genetic algorithm learning for optimizing computation graphs&lt;/a>. InProc. ICLR, page 24,2020&lt;/li>
+&lt;li>Battaglia et al. &lt;a href="http://arxiv.org/abs/1806.01261" target="_blank" rel="noopener">Relational Inductive Biases, Deep Learning, and Graph Networks&lt;/a> ArXiv:1806.01261, October 17, 2018.&lt;/li>
 &lt;li>Grinsztajn et al, &lt;a href="https://arxiv.org/abs/2011.04333" target="_blank" rel="noopener">Geometric Deep Reinforcement Learning for Dynamic DAG Scheduling&lt;/a>. Advances in IEEE ADPRL (ADPRL 2020).&lt;/li>
 &lt;/ul>
 &lt;p>&lt;strong>Working environment&lt;/strong>: &lt;a href="https://team.inria.fr/scool/" target="_blank" rel="noopener">Scool&lt;/a> (previously &lt;a href="http://sequel.lille.inria.fr/" target="_blank" rel="noopener">SequeL&lt;/a>) is a well-known research group in reinforcement learning and bandits. It is composed of 5 permanent researchers, 20+ PhD students, a couple of post-docs and engineers. Scool provides a very rich and stimulating for doing cutting-edge research in RL.&lt;/p></description></item></channel></rss>
