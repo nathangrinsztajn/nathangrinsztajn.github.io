@@ -38,7 +38,8 @@ The goal of this internship is to:
 - Explore new ideas on combining RL and tabu search (or other search algorithms). This exploration can be theoretical or algorithmic.
 
 **Bibliography**:
-- Sutton, Barto,  [Reinforcement Learning, an Introduction](http://incompleteideas.net/book/the-book.html), 2nd edition, 2018
+- Sutton, Barto,  [Reinforcement Learning, an Introduction](http://incompleteideas.net/book/the-book.html), 2nd edition, 2018.
+- Battaglia et al. [Relational Inductive Biases, Deep Learning, and Graph Networks](http://arxiv.org/abs/1806.01261) ArXiv:1806.01261, October 17, 2018.
 - A. Hertz, D. de Werra, [Using tabu search techniques for graph coloring](https://link.springer.com/article/10.1007/BF02239976). _Computing_  **39,** 345–351 (1987).
 
 **Working environment**:  [Scool](https://team.inria.fr/scool/) (previously [SequeL](http://sequel.lille.inria.fr/)) is a well-known research group in reinforcement learning and bandits. It is composed of 5 permanent researchers, 20+ PhD students, a couple of post-docs and engineers. Scool provides a very rich and stimulating for doing cutting-edge research in RL.

@@ -43,7 +43,8 @@ The goal of this internship is to:
 
 **Bibliography**:
 - Sutton, Barto,  [Reinforcement Learning, an Introduction](http://incompleteideas.net/book/the-book.html), 2nd edition, 2018
-- Aditya  Paliwal et al, [Reinforced  genetic  algorithmlearning  for  optimizing  computation  graphs](https://arxiv.org/abs/1905.02494). InProc.  ICLR,  page  24,2020
+- Aditya  Paliwal et al, [Reinforced genetic algorithm learning for optimizing computation graphs](https://arxiv.org/abs/1905.02494). InProc. ICLR, page 24,2020
+- Battaglia et al. [Relational Inductive Biases, Deep Learning, and Graph Networks](http://arxiv.org/abs/1806.01261) ArXiv:1806.01261, October 17, 2018.
 - Grinsztajn et al, [Geometric Deep Reinforcement Learning for Dynamic DAG Scheduling](https://arxiv.org/abs/2011.04333). Advances in IEEE ADPRL (ADPRL 2020).
 
 **Working environment**:  [Scool](https://team.inria.fr/scool/) (previously [SequeL](http://sequel.lille.inria.fr/)) is a well-known research group in reinforcement learning and bandits. It is composed of 5 permanent researchers, 20+ PhD students, a couple of post-docs and engineers. Scool provides a very rich and stimulating for doing cutting-edge research in RL.
