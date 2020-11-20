@@ -14,7 +14,7 @@ organizations:
   url: ""
 
 # Short bio (displayed in user profile at end of posts)
-bio: My research interests include Bandits, Reinforcement Learning, and Machine Learning in General.
+bio: My research interests include reinforcement learning, graph representation learning, and machine learning in general.
 
 interests:
 - Reinforcement Learning
