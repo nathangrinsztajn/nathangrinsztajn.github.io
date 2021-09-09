@@ -4,6 +4,8 @@ date = 2020-10-22T12:12:00+01:00
 
 # Authors. Comma separated list, e.g. `["Bob Smith", "David Jones"]`.
 authors = ["Nathan Grinsztajn", "Olivier Beaumont", "Emmanuel Jeannot", "Philippe Preux"]
+authors_list = "Nathan Grinsztajn, Olivier Beaumont, Emmanuel Jeannot, Philippe Preux"
+# author_notes = ["Nathan Grinsztajn", "Olivier Beaumont", "Emmanuel Jeannot", "Philippe Preux"]
 
 # Publication type.
 # Legend:
