@@ -1,6 +1,6 @@
 +++
 title = "There Is No Turning Back: A Self-Supervised Approach for Reversibility-Aware Reinforcement Learning"
-date = 2021-06-08T12:12:00+01:00
+date = 2021-09-08T12:12:00+01:00
 
 # Authors. Comma separated list, e.g. `["Bob Smith", "David Jones"]`.
 authors = ["Nathan Grinsztajn", "Johan Ferret", "Olivier Pietquin", "Philippe Preux", "Matthieu Geist"]
