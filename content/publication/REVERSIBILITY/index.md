@@ -21,8 +21,8 @@ author_notes = ["*Equal contribution", "*Equal contribution"]
 publication_types = ["1"]
 
 # Publication name and optional abbreviated version.
-# publication = "Advances in [Neurips 2021](https://nips.cc/)"
-# publication_short = "[Neurips 2021](https://nips.cc/)"
+publication = "Advances in [Neurips 2021](https://nips.cc/)"
+publication_short = "[Neurips 2021](https://nips.cc/)"
 # publication_extra = "[spotlight -- 4% acceptance rate]"
 
 # Abstract and optional shortened version.
