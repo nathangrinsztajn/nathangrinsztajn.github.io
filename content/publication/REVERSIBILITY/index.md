@@ -18,11 +18,11 @@ author_notes = ["*Equal contribution", "*Equal contribution"]
 # 6 = Book section
 # 7 = Thesis
 # 8 = Patent
-publication_types = ["3"]
+publication_types = ["1"]
 
 # Publication name and optional abbreviated version.
-# publication = "Advances in [IEEE ADPRL](http://www.ieeessci2020.org/symposiums/adprl.html) (ADPRL 2020)"
-# publication_short = "[IEEE ADPRL](http://www.ieeessci2020.org/symposiums/adprl.html)"
+# publication = "Advances in [Neurips 2021](https://nips.cc/)"
+# publication_short = "[Neurips 2021](https://nips.cc/)"
 # publication_extra = "[spotlight -- 4% acceptance rate]"
 
 # Abstract and optional shortened version.
