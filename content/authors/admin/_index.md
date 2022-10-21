@@ -18,8 +18,8 @@ bio: My research interests include reinforcement learning, graph representation 
 
 interests:
 - Reinforcement Learning
-- Graph Representation Learning
 - Combinatorial Optimization
+- Graph Representation Learning
 
 education:
   courses:

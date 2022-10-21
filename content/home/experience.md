@@ -18,6 +18,15 @@ date_format = "Jan 2006"
 #   Leave `date_end` empty if it's your current employer.
 #   Begin/end multi-line descriptions with 3 quotes `"""`.
 [[experience]]
+  title = "Research Intern"
+  company = "InstaDeep"
+  company_url = ""
+  location = "London, UK"
+  date_start = "2022-04-01"
+  date_end = "2022-10-01"
+  description = "RL for combinatorial optimization, under the supervision of Thomas D. Barrett. Led to: [Population-Based Reinforcement Learning for Combinatorial Optimization](publication/poppy/)."
+
+[[experience]]
   title = "PhD Student"
   company = "Inria"
   company_url = ""
