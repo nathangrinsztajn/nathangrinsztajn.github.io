@@ -1,1 +1,23 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Recent &amp; Upcoming Talks | Nathan Grinsztajn</title><link>https://nathan-grinsztajn.netlify.app/talk/</link><atom:link href="https://nathan-grinsztajn.netlify.app/talk/index.xml" rel="self" type="application/rss+xml"/><description>Recent &amp; Upcoming Talks</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><image><url>https://nathan-grinsztajn.netlify.app/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url><title>Recent &amp; Upcoming Talks</title><link>https://nathan-grinsztajn.netlify.app/talk/</link></image></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Recent &amp; Upcoming Talks | Nathan Grinsztajn</title><link>https://nathan-grinsztajn.netlify.app/talk/</link><atom:link href="https://nathan-grinsztajn.netlify.app/talk/index.xml" rel="self" type="application/rss+xml"/><description>Recent &amp; Upcoming Talks</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><image><url>https://nathan-grinsztajn.netlify.app/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url><title>Recent &amp; Upcoming Talks</title><link>https://nathan-grinsztajn.netlify.app/talk/</link></image><item><title/><link>https://nathan-grinsztajn.netlify.app/talk/phd-defense/css/theme/readme/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://nathan-grinsztajn.netlify.app/talk/phd-defense/css/theme/readme/</guid><description>&lt;h2 id="dependencies">Dependencies&lt;/h2>
+&lt;p>Themes are written using Sass to keep things modular and reduce the need for repeated selectors across files. Make sure that you have the reveal.js development environment installed before proceeding: &lt;a href="https://revealjs.com/installation/#full-setup">https://revealjs.com/installation/#full-setup&lt;/a>&lt;/p>
+&lt;h2 id="creating-a-theme">Creating a Theme&lt;/h2>
+&lt;p>To create your own theme, start by duplicating a &lt;code>.scss&lt;/code> file in &lt;a href="https://github.com/hakimel/reveal.js/blob/master/css/theme/source" target="_blank" rel="noopener">/css/theme/source&lt;/a>. It will be automatically compiled from Sass to CSS (see the &lt;a href="https://github.com/hakimel/reveal.js/blob/master/gulpfile.js" target="_blank" rel="noopener">gulpfile&lt;/a>) when you run &lt;code>npm run build -- css-themes&lt;/code>.&lt;/p>
+&lt;p>Each theme file does four things in the following order:&lt;/p>
+&lt;ol>
+&lt;li>
+&lt;p>&lt;strong>Include &lt;a href="https://github.com/hakimel/reveal.js/blob/master/css/theme/template/mixins.scss" target="_blank" rel="noopener">/css/theme/template/mixins.scss&lt;/a>&lt;/strong>
+Shared utility functions.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>Include &lt;a href="https://github.com/hakimel/reveal.js/blob/master/css/theme/template/settings.scss" target="_blank" rel="noopener">/css/theme/template/settings.scss&lt;/a>&lt;/strong>
+Declares a set of custom variables that the template file (step 4) expects. Can be overridden in step 3.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>Override&lt;/strong>
+This is where you override the default theme. Either by specifying variables (see &lt;a href="https://github.com/hakimel/reveal.js/blob/master/css/theme/template/settings.scss" target="_blank" rel="noopener">settings.scss&lt;/a> for reference) or by adding any selectors and styles you please.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>Include &lt;a href="https://github.com/hakimel/reveal.js/blob/master/css/theme/template/theme.scss" target="_blank" rel="noopener">/css/theme/template/theme.scss&lt;/a>&lt;/strong>
+The template theme file which will generate final CSS output based on the currently defined variables.&lt;/p>
+&lt;/li>
+&lt;/ol></description></item></channel></rss>

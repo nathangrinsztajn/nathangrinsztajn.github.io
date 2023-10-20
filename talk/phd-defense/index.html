@@ -1,0 +1,663 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>Reinforcement Learning for Combinatorial Optimization: Leveraging Uncertainty, Structure and Priors</title>
+
+	<link rel="stylesheet" href="dist/reset.css">
+	<link rel="stylesheet" href="dist/reveal.css">
+	<link rel="stylesheet" href="dist/theme/simple.css" id="theme">
+	<link rel="stylesheet" href="css/custom.css">
+
+	<!-- Theme used for syntax highlighted code -->
+	<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+
+
+</head>
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<!-- <section class="title" data-background-video="videos/tsp.mp4" data-background-video-loop data-background-video-muted> -->
+			<section class="title" data-background-image="images/introduction/cvrp.gif" data-background-video-loop data-background-video-muted>
+				<h4><span>Reinforcement Learning</span> for <span>Combinatorial Optimization</span> <br>Leveraging Uncertainty<br> Structure <br>and Priors</h4>
+				<br>
+				<p class="authors">
+					<medium><a href="https://nathangrinsztajn.github.io/">Nathan Grinsztajn</a></medium>
+				</p>
+				<p class="authors"><small>Supervised by<br><a href="https://philippe-preux.github.io/">Philippe Preux</a></small>
+				</p>
+				<!-- <p>Press <code>space</code> <code>bar</code> to continue</p> -->
+				<!-- <p>Friday, October 30<sup>th</sup>, 2020</p> -->
+				<footer>
+					<img data-src="images/univ-lille.svg" height="50">
+					<img data-src="images/inria.png" height="50">
+					<img data-src="images/cristal.svg" height="50">
+					<img data-src="images/cnrs.png" height="50">
+				</footer>	
+			</section>
+
+
+			<section>
+				<section>
+					<header><h3>Introduction</h3></header>
+				</section>
+				<section>
+					<header><h3>What is Combinatorial Optimization?</h3></header>
+					<br>
+					<p class="fragment">Combinatorial optimization consists of finding
+					an optimal object from a finite set of objects.</p>
+					<p class="fragment"> In many such problems, exhaustive search is not tractable. (Schrijver, 2003)</p>
+				</section>
+
+				<section>
+					<header><h3>Combinatorial Optimization Problems</h3></header>
+					<table style="border-collapse: collapse;">
+						<tr>
+							<td style="border: none;">
+								<figure class="fragment semi-fade-out" data-fragment-index="0">
+									<img data-src="images/introduction/tsp.gif" height="250">
+								</figure>
+							</td>
+							<td style="border: none;">
+								<figure class="fragment semi-fade-out" data-fragment-index="1">
+									<img data-src="images/introduction/cvrp.gif" height="250">
+								</figure>
+							</td>
+							<td style="border: none;">
+								<figure class="fragment semi-fade-out" data-fragment-index="2">
+									<img data-src="images/introduction/job_shop.gif" height="250">
+								</figure>
+							</td>
+						</tr>
+						<tr>
+							<td style="border: none;">
+								<figure class="fragment semi-fade-out" data-fragment-index="3">
+									<img data-src="images/introduction/bin_pack.gif" height="250">
+								</figure>
+							</td>
+							<td style="border: none;">
+								<figure class="fragment semi-fade-out" data-fragment-index="4">
+									<img data-src="images/introduction/graph_coloring.gif" height="250">
+								</figure>
+							</td>
+							<td style="border: none;">
+								<figure class="fragment semi-fade-out" data-fragment-index="5">
+									<img data-src="images/introduction/knapsack.gif" height="250">
+								</figure>
+							</td>
+						</tr>
+					</table>
+				</section>
+
+				<section>
+					<header><h3>Reinforcement Learning</h3></header>
+							<img class="fragment current-visible" data-src="images/introduction/mdp_dark.svg" width="50%">
+							<p>Reinforcement Learning (RL) is a subfield of machine learning that deals with sequential decision making.</p>
+				</section>
+				<section>
+						<header><h3>Markov Decision Process <small>(Puterman, 1994)</small></h3></header>
+							<!-- <img class="fragment" data-src="images/introduction/mdp_dark.svg" width="25%"> -->
+							<p class="fragment"> Markov Decision Process (MDP): $(S, A, T, p, r)$. </p>
+							<p class="fragment"> $S$: the set of states $s$. </p>
+							<p class="fragment"> $A$: the set of actions $a$. </p>
+							<p class="fragment"> $T$: the set of instants (discrete time). </p>
+							<p class="fragment"> $p$: the transition function $p(s_{t+1} \mid s_t, a)$ </p>
+							<p class="fragment"> $r$: the reward function $r(s, a, s')$ </p>
+				</section>
+				<section>
+					<div class="r-stack">
+					<header class="fragment fade-in-then-out" data-fragment-index="0"><h3>Motivation</h3></header>
+					<header class="fragment current-visible" data-fragment-index="1"><h3>(De)Motivation</h3></header>
+					<header class="fragment current-visible" data-fragment-index="2"><h3>(De)Motivation</h3></header>
+					<header class="fragment current-visible" data-fragment-index="3"><h3>(De)Motivation</h3></header>
+					<header class="fragment current-visible" data-fragment-index="4"><h3>(De)Motivation</h3></header>
+					<header class="fragment fade-in-then-out" data-fragment-index="5"><h3><del class="red">(De)</del>Motivation</h3></header>
+					</div>
+					<div class="r-stack">
+					<p class="fragment fade-in-then-out" data-fragment-index="0"> Why should we use RL for CO?</p>
+					<p class="fragment" data-fragment-index="1"> Why shouldn't we use RL for CO?</p>
+					</div>
+					<ul>
+						<li class="fragment" data-fragment-index="2"> Combinatorial optimization has been studied for decades. </li>
+						<div>
+						<li class="fragment" data-fragment-index="3"> Combinatorial optimization problems are deterministic. <span class="fragment"  data-fragment-index="5"> <span class="red"> How to exploit uncertainty? </span></span> </li>
+						<li class="fragment" data-fragment-index="4"> Combinatorial optimization problems generally have a structure. <span class="fragment"  data-fragment-index="5"> <span class="red">How to leverage structure and priors? </span></span> </li>
+					</ul>
+				</section>
+				<!-- <section>
+					<header><h3>Research questions</h3></header>
+					<br>
+					<ul>
+						<li class="fragment">How to <span class="green">smoothly</span> interact with other agents?</li>
+						<li class="fragment">Can we guarantee <span class="red">safety</span> under uncertainty?</li>
+					</ul>
+				</section> -->
+				<section>
+					<header><h3>Outline</h3></header>
+					<ul>
+						<li class="fragment" data-fragment-index="0">Leveraging structure
+							<ol>
+								<li class="fragment" data-fragment-index="3"><a href="#/planning">Reversibility</a></li>
+								<li class="fragment fade-in-then-semi-out" data-fragment-index="4"><a href="#/preparing-worst">Redundancies</a></li>
+							</ol>
+						</li>
+						<li class="fragment" data-fragment-index="1">Dealing with uncertainty
+							<ol>
+								<li class="fragment" data-fragment-index="5"><a href="#/social-interactions">Populations for robustness against uncertainty</a></li>
+								<li class="fragment" data-fragment-index="6" style="opacity: 0.5"><a href="#/acting-constraints">Planning against unknown opponents</a></li>
+							</ol>
+						</li>
+					</ul>
+				</section>
+				<section>
+					<header><h3>Two families of RL approaches</h3></header>
+					<div class="container">
+						<div class="col r-stack" style="align-items: center;align-self: center;">
+							<figure class="fragment fade-in-then-semi-out" data-fragment-index="0">
+								<img src="images/poppy/costa.gif" style="height:20vh; width:auto;">
+								<figcaption class="fragment fade-in-then-out" data-fragment-index="0">Improvement methods (Costa, 2020)</figcaption>
+							</figure>
+							<ul style="font-size:85%">
+								<li class="fragment">Expert knowledge for defining operators</li>
+								<li class="fragment">Problem-specific</li>
+								<li class="fragment">Bias toward initial solution</li>
+							</ul>
+						</div>
+						<div class="col r-stack">
+							<figure class="fragment fade-in-then-semi-out" data-fragment-index="0">
+								<img src="images/poppy/kool.gif" alt="">
+								<figcaption class="fragment fade-in-then-out" data-fragment-index="0">Construction methods (Kool, 2019)</figcaption>
+							</figure>
+							<ul style="font-size:85%">
+								<li class="fragment">General</li>
+								<li class="fragment">Amenable to stochastic problems</li>
+								<li class="fragment">Need extra sampling methods</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+			</section>
+
+
+			<section>
+				<section id="planning">
+					<h2>Leveraging structure</h2><br>
+					<h4><ol><li>Reversibility</li></ol></h4>
+					<br>
+					<ul style="margin:0;">
+						<li style="display: inline;"><a href="https://nathangrinsztajn.github.io/publication/reversibility/">(Neurips 2021)</a></li>
+					</ul>
+				</section>
+				<!-- <section>
+					<header><h3>Principle</h3></header>
+					<br>
+					<ul>
+						<li class="fragment">Reversibility: <span class="green">the ability to undo actions</span>.</li>
+						<li class="fragment">Reversibility is a <span class="green">key property</span> of many combinatorial optimization problems.</li>
+						<li class="fragment">Reversibility is <span class="red">not</span> a property of Markov Decision Processes (MDPs).</li>
+					</ul>
+				</section> -->
+				<section>
+					<header><h3>Sokoban</h3></header>
+					<!-- flex container for images in the same row -->
+					<div class="container">
+						<div style="flex: 2;">
+							<div class="col" style="align-items: center;align-self: center;">
+								<img class="fragment" src="images/reversibility/sokoban.gif" alt="reversibility1" style="width:100%">
+							</div>
+						</div>
+						<div style="flex: 2;">
+							<div class="col" style="align-items: center;align-self: center;">
+								<img class="fragment" src="images/reversibility/sokoban_stuck.gif" alt="reversibility2" style="width:100%">
+							</div>
+						</div>
+					</div>
+				</section>
+				<section>
+					<header><h3>Reversibility via classification</h3></header>
+					<!-- flex container for images in the same row -->
+					<div class="container">
+						<div style="flex: 2;">
+							<div class="col" style="align-items: center;align-self: center;">
+								<img class="fragment" src="images/reversibility/pdfresizer1.svg" alt="reversibility1" style="width:100%">
+							</div>
+						</div>
+						<div style="flex: 2;">
+							<div class="col" style="align-items: center;align-self: center;">
+								<img class="fragment" src="images/reversibility/pdfresizer2.svg" alt="reversibility2" style="width:100%">
+							</div>
+						</div>
+					</div>	
+				</section>
+				<section>
+					<header><h3>Formalizing reversibility</h3></header>
+					<p class="theorem" align="left"><strong>Degree of Reversibility</strong> <br>
+				We call the <strong> degree of reversibility</strong> following $\pi$ of action $a$ in state $s$ the quantity:
+				\begin{equation*}
+				\phi_\pi(s, a) = p_\pi(s \in \tau_{t+1:\infty}\mid s_t = s, a_t=a),
+				\end{equation*}
+				with $\tau = \{ s_i \}_{i=1 \, \ldots \, T} \sim \pi$ corresponding to a trajectory, and $\tau_{t:t'}$ the subset of the trajectory between the timesteps $t$ and $t'$.
+				</p>
+				</section>
+				<section>
+					<header><h3>Precedence estimation</h3></header>
+					<p align="left">
+						Given $s, s'$ sampled from a trajectory, can we predict whether $s$ or $s'$ comes first ? It is a supervised classification problem, estimating $\mathbb{E}_{s_t=s, s_{t'} = s'} \big[ \mathbb{1}_{t'>t} \big] $.
+						<p class="theorem fragment" align="left"><strong>Precedence Estimator</strong> <br>
+							Given a fixed policy $\pi$, we define the <strong>precedence estimator</strong> between two states:
+							\begin{equation*}
+								{\psi}_{\pi}(s, s') = \lim_{T\rightarrow \infty} \mathbb{E}_{\tau \sim \pi} \, \mathbb{E}_{\substack{s_{t}=s, s_{t'}=s' \\ t, t' < T}} \big[ \mathbb{1}_{t'>t} \big].
+							\end{equation*}
+							<span class="fragment">(theorem: this limit exists!)</span>
+						</p>
+					</p>
+				</section>
+				<section>
+					<header><h3>Estimating reversibility from precedence</h3></header>
+					<span class="fragment"> We finally define the <strong> empirical reversibility</strong> using the precedence estimator:
+					\begin{equation*}
+					{\overline{\phi}}_\pi(s, a) =\mathbb{E}_{s' \sim P(s, a)}\big[{\psi}_\pi(s', s)\big].
+					\end{equation*}
+					</span>
+					<span class="theorem fragment"> Given a policy $\pi$, a state $s$ and an action $a$, we have: $\overline{\phi}_\pi(s, a) \geq \frac{\phi_\pi(s, a)}{2} $.</span>
+					<span class="fragment"> It is useful to <strong>provably</strong> detect irreversible moves:
+					\begin{equation*}
+						\overline{\phi}_\pi(s, a) \ll 1 \implies \phi_\pi(s, a) \ll 1 \text{ (``$a$ is hard to reverse'')}
+					\end{equation*}
+					</span>
+				</section>
+				<section>
+					<header><h3>Self-supervised Learning of the Chronological Order of Events</h3></header>
+					<br>
+					<img src="images/reversibility/precedence_estimation.svg" alt="precedence_estimation">
+				</section>
+				<section>
+					<header><h3>Reversibility for Sokoban</h3></header>
+					<br>
+					<div class="container">
+						<div style="flex: 2;">
+							<div class="col" style="align-items: center;align-self: center;">
+								<div class="r-stack">
+									<img class="fragment current-visible" data-fragment-index="1" src="images/reversibility/sokoban_rev_single.svg" style="width:100%">
+									<img class="fragment current-visible" data-fragment-index="2" src="images/reversibility/sokoban_rev_single.svg" style="width:100%">
+									<img class="fragment" data-fragment-index="3" src="images/reversibility/sokoban_scores_v2.png" style="width:100%">
+								</div>
+							</div>
+						</div>
+						<div style="flex: 2;">
+							<div class="col" style="align-items: center;align-self: center;">
+								<div class="r-stack">
+									<img class="fragment" data-fragment-index="0" src="images/reversibility/RAE.svg" style="width:100%">
+									<img class="fragment" data-fragment-index="2" src="images/reversibility/sokoban_episode3.png" style="width:100%">
+								</div>
+							</div>
+						</div>
+					</div>	
+				</section>
+				<section>
+					<header><h3>Application to safety</h3></header>
+					<br>
+					<div class="container">
+						<div style="flex: 2;">
+							<div class="col" style="align-items: center;align-self: center;">
+								<div class="r-stack">
+									<img class="fragment current-visible" data-fragment-index="1" src="images/reversibility/cart_pole.gif" style="width:100%">
+									<img class="fragment current-visible" data-fragment-index="2" src="images/reversibility/cart_pole.gif" style="width:100%">
+									<img class="fragment" data-fragment-index="3" src="images/reversibility/cartpole_safe_length.svg" style="width:100%">
+								</div>
+							</div>
+						</div>
+						<div style="flex: 2;">
+							<div class="col" style="align-items: center;align-self: center;">
+								<div class="r-stack">
+									<img class="fragment" data-fragment-index="0" src="images/reversibility/RAC.svg" style="width:100%">
+									<img class="fragment" data-fragment-index="2" src="images/reversibility/cartpole_reward_free_x_y.svg" style="width:100%">
+								</div>
+							</div>
+						</div>
+					</div>	
+				</section>
+			</section>
+			<section>
+				<section id="Redundancy">
+					<h2 style="color:grey">Leveraging structure</h2><br>
+					<h4><ol start="2"><li style="color:grey">Redundancy</li></ol></h4>
+					<br>
+					<ul style="margin:0;">
+						<li style= "color:grey; display: inline;"><a href="https://nathangrinsztajn.github.io/publication/easee/">(Deep RL at NeurIPS 2022)</a></li>
+					</ul>
+				</section>
+			</section>
+			<section>
+				<section id="Robustness to Uncertainty">
+					<h2>Dealing with uncertainty</h2><br>
+					<h4><ol><li>Populations for robustness</li></ol></h4>
+					<br>
+					<ul style="margin:0;">
+						<li style="display: inline;"><a href="https://nathangrinsztajn.github.io/publication/poppy/">(Under review)</a></li>
+					</ul>
+				</section>
+				<section>
+					<header><h3>Attention, learn to solve routing problems <small>(Kool, 2019)</small></h3></header>
+					<div class="container">
+						<div style="flex: 2;">
+							<p class="fragment" align="left">Presents an <strong>encoder / decoder architecture</strong> for combinatorial problem.</p>
+							<ul>
+								<li class="fragment">Encode once with a large transformer.</li>
+								<li class="fragment">Decode at every timestep with a small decoder to get the next action.</li>
+							</ul>
+						</div>
+						<div class="col fragment" style="align-items: center;align-self: center;">
+							<img  src="images/poppy/tsp.gif" width="100%">
+						</div>
+					</div>
+				</section>
+				<section>
+					<header><h3>Why learning a population of solvers?</h3></header>
+					<p class="fragment"> 
+						<div class="r-stack">
+							<span class="fragment fade-in-then-out" data-fragment-index="0"> In this environment, the 0-scoop and 3-scoop ice-cream are placed randomly left or rigth.</span>
+							<span class="fragment fade-in-then-out" data-fragment-index="1"> One agent is risk-averse.</span>
+							<span class="fragment fade-in-then-out" data-fragment-index="2"> One agent is risk-averse.</span>
+							<span class="fragment" data-fragment-index="3">A population of agents can be more optimistic in the face of uncertainty.</span>
+						</div>
+					</p>
+					<div class="container">
+						<div class="col fragment" data-fragment-index="0">
+							<img src="images/poppy/motivation_1.svg" width="100%">
+						</div>
+						<div class="col fragment" data-fragment-index="2">
+							<img src="images/poppy/motivation_2.svg" width="73%">
+						</div>
+				</section>
+				<section>
+					<header><h3>Why learning a population of solvers?</h3></header>
+					<p class="fragment">Whats does it tell us for CO problems?.
+					</p>
+					<div class="container">
+						<div class="col fragment">
+							<img src="images/poppy/motivation_1.svg" width="100%">
+						</div>
+						<div class="col fragment">
+							<img src="images/poppy/uncertainty.png" width="75%">
+						</div>
+				</section>
+				<section>
+					<header><h3>Why learning a population of solvers?</h3></header>
+					<p class="fragment">Whats does it tell us for CO problems?.
+					</p>
+					<div class="container">
+						<div class="col fragment" style="align-items: center;align-self: center;" >
+							<figure>
+							<img src="images/poppy/traj_rl.png" width="100%">
+							<figcaption><span class="red">Training:</span> optimizing expected reward</figcaption>
+							</figure>
+						</div>
+						<div class="col r-stack">
+							<figure class="fragment fade-in-then-out">
+							<img src="images/poppy/trajs.png" width="100%">
+							<figcaption><span class="red">Inference:</span> extensive sampling</figcaption>
+							</figure>
+							<figure class="fragment">
+							<img src="images/poppy/trajs_pop.png" width="100%">
+							<figcaption>How to take into account this sampling at training?</figcaption>
+							</figure>
+						</div>
+				</section>
+				<section>
+					<header><h3>Population training wish list</h3></header>
+					<ul>
+						<li class="fragment"><strong>Scalability</strong>: using a population should not add too much of a boilerplate.</li>
+						<li class="fragment"><strong>Diversity</strong>: agents should propose different solutions.</li>
+						<li class="fragment"><strong>No expert knowledge</strong>: tackling every CO problems with the same algorithm and avoiding (likely sub-optimal) human priors.</li>
+						<li class="fragment"><strong>Performance</strong>: focus solely on the population performance without explicit behavioral markers and diversity metrics.</li>
+					</ul>
+					</section>
+				<section>
+					<header><h3>Method: Poppy</h3></header>
+					<p>How to train a population of agent focusing solely on the population performance?</p>
+					<div class="r-stack">
+						<div class="fragment fade-in-then-out" data-fragment-index="0">
+							<p><strong>Classic Objective</strong></p>
+							<span>$J(\theta) = \mathbb{E}_{\rho \sim \mathcal{D}} \mathbb{E}_{\tau \sim \pi_{\theta}, \rho} R(\tau)$</span>
+						</div>
+						<div class="fragment" data-fragment-index="2">
+							<p><strong>Population Objective</strong></p>
+							<span>	$ \scriptsize J_{\text{pop}}(\theta_1, \dots, \theta_K) \doteq \mathbb{E}_{\rho \sim \mathcal{D}} 
+								\mathbb{E}_{\tau_1 \sim \pi_{\theta_1}, \dots, \tau_K \sim \pi_{\theta_K}} \max\left[R(\tau_1), \dots, R(\tau_K)\right]$</span>
+						</div>
+					</div>
+					<div class="r-stack">
+						<div class="fragment fade-in-then-out" data-fragment-index="1">
+							<p><strong>Policy gradient</strong> (Sutton, 1999)</p>
+							<span>$\color{red}{\nabla}J(\theta) = \mathbb{E}_{\rho \sim \mathcal{D}} \mathbb{E}_{\tau \sim \pi_{\theta}, \rho} R(\tau) \color{red}{\nabla} p_\theta(\tau)$</span>
+						</div>
+						<div class="fragment theorem" data-fragment-index="3">
+							<p><strong>Population policy gradient</strong></p>
+							<span>	$ \scriptsize \color{red}{\nabla}J_{\text{pop}}(\theta_1, \dots, \theta_K) \doteq \mathbb{E}_{\rho \sim \mathcal{D}} 
+								\mathbb{E}_{\tau_1, \dots, \tau_K} \bigr(R(\tau_{i^*}) - R(\tau_{i^{**}})\bigr) \color{red}{\nabla} \log p_{\theta_{i^{*}}}(\tau_{i^{*}})$</span>
+							<span>where $i^*$ is the best agent and $i^{**}$ the second best agent</span>
+						</div>
+					</div>
+				</section>
+				<section>
+					<header><h3>Method: Poppy</h3></header>
+					<p class="fragment">How to initialize the population?
+					</p>
+					<img class="fragment" src="images/poppy/training_legend.png">
+					<div class="container">
+						<div class="col fragment">
+							<img src="images/poppy/training_single.png" height=80%">
+						</div>
+						<div class="col fragment">
+							<img src="images/poppy/training_pop.png" height="80%">
+						</div>
+					</div>
+					<span class="fragment">✔️No need to train the population from scratch</span>
+					<span class="fragment">✔️Parameter sharing makes the training more efficient</span>
+				</section>
+				<section>
+					<header><h3>Results:</h3></header>
+					<div class="container">
+						<div class="col">
+							<div class="r-stack">
+								<figure class="fragment fade-in-then-out" data-fragment-index="0">
+									<img src="images/poppy/training_curves_poppy_long.svg" height=100%">
+									<figcaption>Training: TSP</figcaption>
+								</figure>
+								<figure class="fragment fade-in-then-out" data-fragment-index="1">
+									<img src="images/poppy/training_curves_poppy_long.svg" height=100%">
+									<figcaption>Training: TSP</figcaption>
+								</figure>
+								<figure class="fragment" data-fragment-index="2">
+									<img src="images/poppy/cvrp_100_pareto.svg" height=100%">
+									<figcaption>Inference: CVRP</figcaption>
+								</figure>
+							</div>
+						</div>
+						<div class="col">
+							<div class="r-stack">
+								<figure class="fragment fade-in-then-out" data-fragment-index="1">
+									<img src="images/poppy/tsp_100_pareto.svg" height="100%">
+									<figcaption>Inference: TSP</figcaption>
+								</figure>
+								<figure class="fragment fade-in-then-out" data-fragment-index="2">
+									<img src="images/poppy/tsp_100_pareto.svg" height="100%">
+									<figcaption>Inference: TSP</figcaption>
+								</figure>
+								<figure class="fragment" data-fragment-index="3">
+									<img src="images/poppy/kp_100_pareto.svg" height="100%">
+									<figcaption>Inference: KP</figcaption>
+								</figure>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section>
+					<header><h3>Analysis</h3></header>
+					<div class="container">
+						<div class="col">
+							<figure>
+								<img class="fragment" data-fragment-index="1" src="images/poppy/performance_bar.svg" height="100%">
+								<figcaption class="fragment" data-fragment-index="0">Population vs individual performance</figcaption>
+							</figure>
+						</div>
+						<div class="col">
+							<figure>
+								<img class="fragment" data-fragment-index="3" src="images/poppy/pop_bar.svg" height="100%">
+								<figcaption class="fragment" data-fragment-index="2">How diverse is the population?</figcaption>
+							</figure>
+						</div>
+					</div>
+				</section>
+				<section>
+					<header><h3>Analysis</h3></header>
+					<div class="container">
+						<div class="col">
+							<figure>
+								<img class="fragment" data-fragment-index="0" src="images/poppy/7diff_1.png" height="100%">
+								<figcaption class="fragment" data-fragment-index="0">Can you spot the differences?</figcaption>
+							</figure>
+						</div>
+						<div class="col">
+							<figure>
+								<img class="fragment" src="images/poppy/7diff_2.png" height="100%">
+							</figure>
+						</div>
+					</div>
+				</section>
+			</section>
+			<section id="planning uncertainty">
+				<h2 style="color:grey"></h2>Dealing with uncertainty<br>
+				<h4 style="color:grey"><ol start="2"><li>Planning against unknown opponents</li></ol></h4>
+				<br>
+				<!-- <ul style="margin:0;">
+					<li style="display: inline;"><a href="https://budgeted-rl.github.io/">(NeurIPS 2019)</a></li>
+				</ul> -->
+			</section>
+		</section>
+			 
+		
+		<section>
+			<section>
+				<header><h3>Conclusion</h3></header>
+			</section>
+			<section style="font-size:68%">
+				<header><h3><span class="fragment fade-down" style="display: inline-block;"><span class="green">Reinforcement Learning</span></span> <span class="fragment fade-down" style="display: inline-block;">for <span class="blue">Combinatorial Optimization</span></span> <span class="fragment fade-down" style="display: inline-block;">Leveraging <span class="red">Uncertainty, </span></span> <span class="fragment fade-down" style="display: inline-block;"> <span class="red">Structure and Priors</span></span></h3></header>
+				<br>
+				<ol>
+					<li class="fragment">Structure
+						<ul>
+							<li class="fragment">Use an architecture with specific <span class="red">inductive biases</span></li>
+							<li class="fragment">Be careful about <span class="red">irreversible</span> actions</li>
+							<li class="fragment">Exploit <span class="red">redundancies</span> in the trajectories to explore efficiently</li>
+						</ul>
+					</li>
+					<br>
+					<li class="fragment">Uncertainty
+						<ul>
+							<li class="fragment">RL approaches shine when there is <span class="red">uncertainty or stochasticity</span> on the problem</li>
+							<li class="fragment">When the optimal decision is impossible to compute, use a <span class="red">population</span> of solvers for robustness</li>
+						</ul>
+					</li>
+				</ol>
+			</section>
+			<section>
+				<header class="fragment" data-fragment-index="0"><h3>Motivation (2)</h3></header>
+				<p class="fragment"> Why should we use RL for CO?</p>
+				<ul>
+					<li class="fragment"> It can take into account the specific (unknown) distribution of encountered problem instances </li>
+					<div>
+					<li class="fragment"> It is a general framework that can be applied to any problem that can be formulated as an
+						MDP</li>
+					<li class="fragment"> It does not require pre-solved instances to learn from </li>
+					<li class="fragment"> It can natively deal with uncertainty on the problem data</li>
+					<li class="fragment"> RL can be compute-intensive, but most of the cost is paid during training. Once the agent is trained, it can be used to solve new instances of the problem quickly.</li>
+				</ul>
+			</section>
+			<section style="font-size:85%">
+				<header><h3>Summary of our contributions</h3></header>
+				<br>
+				<small>
+				<ul>
+					<li class="fragment">International Conferences
+						<ul style="list-style: none">
+							<li><em>Geometric deep reinforcement learning for dynamic DAG scheduling.</em> <a href="https://eleurent.github.io/kl-olop/">(IEEE ADPRL 2020)</a></li>
+							<li><em>A reinforcement learning based strategy for heterogeneous dynamic scheduling.</em> <a href="https://eleurent.github.io/interval-prediction/">(IEEE CLUSTER 2021)</a></li>
+							<li><em>There Is No Turning Back: A Self-Supervised Approach for Reversibility-Aware Reinforcement Learning</em> <a href="https://budgeted-rl.github.io//">(NeurIPS 2021)</a></li>
+						</ul>
+					</li>
+					<li class="fragment">Workshops
+						<ul style="list-style: none">
+							<li><em>Better state exploration using action sequence equivalence</em> <a href="https://eleurent.github.io/robust-control/">(DRL at NeurIPS 2022)</a></li>
+						</ul>
+					</li>
+					<li class="fragment">Preprints
+						<ul style="list-style: none">
+							<li><em>Population-Based Reinforcement Learning for Combinatorial Optimization</em> <a href="https://eleurent.github.io/planning-gap-complexity/">(Submitted to NeurIPS 2023)</a></li>
+							<li><em>Efficient Search of Human Adversarial Policies in Chess</em> <a href="">(Submitted to ECAI 2023)</a></li>
+						</ul>
+					</li>
+					<li class="fragment">Software (collaboration)
+						<ul style="list-style: none">
+							<li><em>Jumanji: a Suite of Diverse and Challenging Reinforcement Learning Environments in JAX</em> <a href="https://github.com/eleurent/highway-env">(Jumanji)</a></li>
+						</ul>
+					</li>
+				</ul>
+				</small>
+			</section>
+			<section>
+				<header><h3>Perspectives</h3></header>
+				<ul>
+					<li class="fragment">Should reinforcementlearning be end-to-end?</li>
+						<ul>
+							<li class="'fragment" style="list-style: none">Combining RL with evolutionary algorithms</li>
+							<li class="'fragment" style="list-style: none">Tool-augmented reinforcement learning</li>
+						</ul>
+					</li>
+					<li class="fragment">Which problems are best suited for RL?</li>
+					<ul>
+						<li class="'fragment" style="list-style: none">Leveraging uncertainty</li>
+						<li class="'fragment" style="list-style: none">From canonical to real-world problems</li>
+					</ul>
+				</ul>
+			</section>
+			<section class="title"  data-background-image="images/introduction/cvrp.gif" data-background-video-loop data-background-video-muted>
+				<h2>Thank you</h2>
+			</section>
+		</section>
+		</div>
+	</div>
+
+	<script src="dist/reveal.js"></script>
+	<script src="plugin/notes/notes.js"></script>
+	<script src="plugin/search/search.js"></script>
+	<script src="plugin/highlight/highlight.js"></script>
+	<script src="plugin/math/math.js"></script>
+	<script src="plugin/zoom/zoom.js"></script>
+	<script async defer src="https://buttons.github.io/buttons.js"></script>
+	<script>
+		// More info about initialization & config:
+		// - https://revealjs.com/initialization/
+		// - https://revealjs.com/config/
+		Reveal.initialize({
+			hash: true,
+			slideNumber: true,
+			math: {
+				mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
+				config: 'TeX-AMS_HTML-full',
+		      // pass other options into `MathJax.Hub.Config()`
+		      TeX: { Macros: {
+		      	Real: "{\\mathbb{R}}",
+		      	cC: "{\\mathcal{C}}",
+		      	expectedvalue: "\\mathop{\\mathbb{E}}",
+		      }}
+		  },
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: [ RevealSearch, RevealHighlight, RevealNotes, RevealMath, RevealZoom ]
+		});
+	</script>
+</body>
+</html>
