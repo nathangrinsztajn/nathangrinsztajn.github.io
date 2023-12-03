@@ -10,8 +10,8 @@ role: PhD Candidate
 
 # Organizations/Affiliations
 organizations:
-- name: Inria/CNRS/Univ. Lill
-  url: ""
+- name: InstaDeep
+  url: "https://www.instadeep.com"
 
 # Short bio (displayed in user profile at end of posts)
 bio: My research interests include reinforcement learning, graph representation learning, and machine learning in general.
@@ -19,13 +19,13 @@ bio: My research interests include reinforcement learning, graph representation 
 interests:
 - Reinforcement Learning
 - Combinatorial Optimization
-- Graph Representation Learning
+- Large Language Models
 
 education:
   courses:
   - course: PhD Student
     institution: Inria Lille, SequeL/ScooL team
-    year: 2019-now
+    year: 2019-2023
   - course: MSc MVA "Mathematics, Vision and Learning"
     institution: École Normale Supérieure Paris-Saclay
     year: 2019
@@ -69,4 +69,4 @@ user_groups:
 - Visitors
 ---
 
-I am a Ph.D. student in reinforcement learning for combinatorial optimization at Inria/CNRS in the SequeL/ScooL team, under the supervision of P. Preux. My research interests also include graph representation learning and geometric deep learning.
+I am a research scientist at [InstaDeep](https://www.instadeep.com), where I focus on reinforcement learning for combinatorial optimiation and discrete problems. Before that, I was a Ph.D. student in reinforcement learning for combinatorial optimization at Inria/CNRS in the SequeL/ScooL team, under the supervision of [P. Preux](https://philippe-preux.github.io).

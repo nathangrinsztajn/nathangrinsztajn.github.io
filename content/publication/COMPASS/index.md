@@ -1,9 +1,9 @@
 +++
-title = "Winner Takes It All: Training Performant RL Populations for Combinatorial Optimization"
+title = "Combinatorial Optimization with Policy Adaptation using Latent Space Search"
 date = 2023-10-07T12:11:00+01:00
 
 # Authors. Comma separated list, e.g. `["Bob Smith", "David Jones"]`.
-authors = ["Nathan Grinsztajn", "Daniel Furelos-Blanco", "Shikha Surana", "Clément Bonnet", "Thomas D. Barrett"]
+authors = ["Felix Chalumeau", "Shikha Surana", "Clément Bonnet", "Nathan Grinsztajn", "Arnu Pretorius", "Alexandre Laterre", "Thomas D. Barrett"]
 
 # Publication type.
 # Legend:
@@ -24,7 +24,7 @@ publication_short = "[Neurips 2023](https://nips.cc/)"
 # publication_extra = "[spotlight -- 4% acceptance rate]"
 
 # Abstract and optional shortened version.
-abstract = """Applying reinforcement learning (RL) to combinatorial optimization problems is attractive as it removes the need for expert knowledge or pre-solved instances. However, it is unrealistic to expect an agent to solve these (often NP-)hard problems in a single shot at inference due to their inherent complexity. Thus, leading approaches often implement additional search strategies, from stochastic sampling and beam search to explicit fine-tuning. In this paper, we argue for the benefits of learning a population of complementary policies, which can be simultaneously rolled out at inference. To this end, we introduce Poppy, a simple training procedure for populations. Instead of relying on a predefined or hand-crafted notion of diversity, Poppy induces an unsupervised specialization targeted solely at maximizing the performance of the population. We show that Poppy produces a set of complementary policies, and obtains state-of-the-art RL results on four popular NP-hard problems: traveling salesman, capacitated vehicle routing, 0-1 knapsack, and job-shop scheduling."""
+abstract = """Combinatorial Optimization underpins many real-world applications and yet, designing performant algorithms to solve these complex, typically NP-hard, problems remains a significant research challenge. Reinforcement Learning (RL) provides a versatile framework for designing heuristics across a broad spectrum of problem domains. However, despite notable progress, RL has not yet supplanted industrial solvers as the go-to solution. Current approaches emphasize pre-training heuristics that construct solutions but often rely on search procedures with limited variance, such as stochastically sampling numerous solutions from a single policy or employing computationally expensive fine-tuning of the policy on individual problem instances. Building on the intuition that performant search at inference time should be anticipated during pre-training, we propose COMPASS, a novel RL approach that parameterizes a distribution of diverse and specialized policies conditioned on a continuous latent space. We evaluate COMPASS across three canonical problems - Travelling Salesman, Capacitated Vehicle Routing, and Job-Shop Scheduling - and demonstrate that our search strategy (i) outperforms state-of-the-art approaches on 11 standard benchmarking tasks and (ii) generalizes better, surpassing all other approaches on a set of 18 procedurally transformed instance distributions."""
 
 # Is this a selected publication? (true/false)
 featured = true
@@ -51,7 +51,7 @@ projects = []
 slides = ""
 
 # Links (optional).
-url_pdf = "https://arxiv.org/abs/2210.03475"
+url_pdf = "https://arxiv.org/abs/2311.13569"
 url_preprint = ""
 url_code = ""
 url_dataset = ""
