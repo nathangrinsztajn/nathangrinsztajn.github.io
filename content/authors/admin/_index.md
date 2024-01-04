@@ -69,4 +69,4 @@ user_groups:
 - Visitors
 ---
 
-I am a research scientist at [InstaDeep](https://www.instadeep.com), where I focus on reinforcement learning for combinatorial optimiation and discrete problems. Before that, I was a Ph.D. student in reinforcement learning for combinatorial optimization at Inria/CNRS in the SequeL/ScooL team, under the supervision of [P. Preux](https://philippe-preux.github.io).
+I am a research scientist at [InstaDeep](https://www.instadeep.com), where I focus on reinforcement learning for combinatorial optimization and discrete problems. Before that, I was a Ph.D. student in reinforcement learning for combinatorial optimization at Inria/CNRS in the SequeL/ScooL team, under the supervision of [P. Preux](https://philippe-preux.github.io).
