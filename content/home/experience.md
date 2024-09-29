@@ -17,6 +17,25 @@ date_format = "Jan 2006"
 #   Required fields are `title`, `company`, and `date_start`.
 #   Leave `date_end` empty if it's your current employer.
 #   Begin/end multi-line descriptions with 3 quotes `"""`.
+
+[[experience]]
+  title = "Member of Technical Staff"
+  company = "Cohere"
+  company_url = ""
+  location = "Paris, France"
+  date_start = "2024-04-15"
+  date_end = ""
+  description = "RL for LLMs."
+
+[[experience]]
+  title = "Research Scientist"
+  company = "InstaDeep"
+  company_url = ""
+  location = "London, UK"
+  date_start = "2023-04-01"
+  date_end = "2024-04-15"
+  description = "RL and transformers for combinatorial optimization."
+
 [[experience]]
   title = "Research Intern"
   company = "InstaDeep"
@@ -32,7 +51,7 @@ date_format = "Jan 2006"
   company_url = ""
   location = "Lille, France"
   date_start = "2019-10-01"
-  date_end = ""
+  date_end = "2023-04-01"
   description = "Reinforcement learning for combinatorial optimization, graph representation. Under the supervision of P. Preux."
 
 #Responsibilities include:

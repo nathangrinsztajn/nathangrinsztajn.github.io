@@ -6,32 +6,32 @@ title:  Nathan Grinsztajn
 superuser: true
 
 # Role/position
-role: PhD Candidate 
+role: RL & LLMs
 
 # Organizations/Affiliations
 organizations:
-- name: InstaDeep
-  url: "https://www.instadeep.com"
+- name: Cohere
+  url: "https://www.cohere.com"
 
 # Short bio (displayed in user profile at end of posts)
-bio: My research interests include reinforcement learning, graph representation learning, and machine learning in general.
+bio: My research interests include reinforcement learning, large language models, and combinatorial optimization.
 
 interests:
 - Reinforcement Learning
-- Combinatorial Optimization
 - Large Language Models
+- Combinatorial Optimization
 
 education:
   courses:
+  - job: Technical Staff
+    institution: Cohere
+    year: 2024-2023
+  - job: Research Scientist
+    institution: Instadeep
+    year: 2023-2024
   - course: PhD Student
     institution: Inria Lille, SequeL/ScooL team
     year: 2019-2023
-  - course: MSc MVA "Mathematics, Vision and Learning"
-    institution: École Normale Supérieure Paris-Saclay
-    year: 2019
-  - course: Graduate degree in Statistics and Computer Science
-    institution: Ecole polytechnique
-    year: 2015-2019
   
 # Social/Academic Networking
 # For available icons, see: https://sourcethemes.com/academic/docs/page-builder/#icons
@@ -68,5 +68,4 @@ user_groups:
 - Researchers
 - Visitors
 ---
-
-I am a research scientist at [InstaDeep](https://www.instadeep.com), where I focus on reinforcement learning for combinatorial optimization and discrete problems. Before that, I was a Ph.D. student in reinforcement learning for combinatorial optimization at Inria/CNRS in the SequeL/ScooL team, under the supervision of [P. Preux](https://philippe-preux.github.io).
+I work on RL, LLMs, and their interactions at [Cohere](https://www.cohere.com). Previously, I was a research scientist at [InstaDeep](https://www.instadeep.com), where I focused on using transformers for combinatorial optimization and discrete problems. I hold a Ph.D. in reinforcement learning for combinatorial optimization from Inria/CNRS, where I was part of the SequeL/ScooL team under the supervision of [P. Preux](https://philippe-preux.github.io).
