@@ -6,26 +6,30 @@ title:  Nathan Grinsztajn
 superuser: true
 
 # Role/position
-role: RL & LLMs
+role: Agents & LLMs
 
 # Organizations/Affiliations
 organizations:
-- name: Cohere
-  url: "https://www.cohere.com"
+- name: Mistral AI
+  url: "https://mistral.ai"
 
 # Short bio (displayed in user profile at end of posts)
-bio: My research interests include reinforcement learning, large language models, and combinatorial optimization.
+bio: My research interests include agents, large language models, reinforcement learning, and combinatorial optimization.
 
 interests:
-- Reinforcement Learning
+- Agents
 - Large Language Models
+- Reinforcement Learning
 - Combinatorial Optimization
 
 education:
   courses:
-  - job: Technical Staff
+  - job: Research Scientist
+    institution: Mistral AI
+    year: 2025-present
+  - job: Member of Technical Staff
     institution: Cohere
-    year: 2024-2023
+    year: 2024-2025
   - job: Research Scientist
     institution: Instadeep
     year: 2023-2024
@@ -68,4 +72,4 @@ user_groups:
 - Researchers
 - Visitors
 ---
-I work on RL, LLMs, and their interactions at [Cohere](https://www.cohere.com). Previously, I was a research scientist at [InstaDeep](https://www.instadeep.com), where I focused on using transformers for combinatorial optimization and discrete problems. I hold a Ph.D. in reinforcement learning for combinatorial optimization from Inria/CNRS, where I was part of the SequeL/ScooL team under the supervision of [P. Preux](https://philippe-preux.github.io).
+I work on agents at [Mistral AI](https://mistral.ai). Previously, I was a Member of Technical Staff at [Cohere](https://www.cohere.com), where I worked on RL for LLMs and reasoning, and before that a research scientist at [InstaDeep](https://www.instadeep.com), where I focused on transformers for combinatorial optimization and discrete problems. I hold a Ph.D. in reinforcement learning for combinatorial optimization from Inria/CNRS, where I was part of the SequeL/ScooL team under the supervision of [P. Preux](https://philippe-preux.github.io).
